@@ -1,7 +1,7 @@
 
 ---
 
-# Niveau 3 - Redirection ouverte
+# Redirection ouverte
 
 ## Description de la faille
 

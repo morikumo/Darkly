@@ -1,7 +1,7 @@
 
 ---
 
-# Niveau 2 - Injection de paramètres cachés
+# Injection de paramètres cachés
 
 ## Description de la faille
 

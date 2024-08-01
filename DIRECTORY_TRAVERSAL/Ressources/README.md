@@ -1,7 +1,7 @@
 
 ---
 
-# Niveau 5 - Directory Traversal
+# Directory Traversal
 
 ## Description de la faille
 

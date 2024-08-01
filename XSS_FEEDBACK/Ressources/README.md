@@ -1,7 +1,7 @@
 
 ---
 
-# Niveau 6 - Cross-Site Scripting (XSS)
+# Cross-Site Scripting (XSS)
 
 ## Description de la faille
 

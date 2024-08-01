@@ -1,7 +1,7 @@
 
 ---
 
-# Niveau 1 - Réinitialisation de mot de passe
+# Réinitialisation de mot de passe
 
 ## Description de la faille
 
