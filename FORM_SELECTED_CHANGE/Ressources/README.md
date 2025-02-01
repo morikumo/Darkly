@@ -46,15 +46,11 @@ http://ip-addr/?page=survey
 4. **Observation de la méthode POST** :
    - La présence de `method="post"` dans le formulaire indique que les données soumises sont envoyées au serveur pour traitement. Cela suggère qu'une vérification côté serveur est effectuée, ce qui est un indice que des paramètres cachés pourraient être utilisés ou manipulés par le backend.
 
-5. **Modification des valeurs** :
-   - Modifiez la valeur du champ `hidden` pour essayer différentes valeurs. Par exemple, changez `value="3"` en une autre valeur.
-   - Sélectionnez une valeur différente dans le menu déroulant.
-
-6. **Soumission du formulaire** :
+5. **Soumission du formulaire** :
    - Le formulaire se soumet automatiquement lorsque la valeur du menu déroulant est changée grâce à l'attribut `onchange`.
 
-7. **Obtention du flag** :
-   - En modifiant la valeur du champ `hidden` et en sélectionnant une valeur dans le menu déroulant, le flag a été révélé.
+6. **Obtention du flag** :
+   - En modifiant la valeur de l'attribut 'value' dans le formulaire, au niveau des balises <option>, et en sélectionnant ensuite cette option sur le site, nous obtenons le flag.
 
 ## Nom de la faille
 
@@ -71,8 +67,7 @@ Cette faille est connue sous le nom d'**injection de paramètres cachés**.
 Pour corriger cette faille, voici quelques recommandations :
 
 1. **Validation côté serveur** : Assurez-vous que toutes les entrées et paramètres utilisateurs sont validés côté serveur, et non seulement côté client.
-2. **Minimiser les champs `hidden`** : Utilisez des champs cachés uniquement lorsque cela est absolument nécessaire et assurez-vous qu'ils ne contiennent pas d'informations sensibles ou modifiables.
-3. **Utilisation de tokens de session** : Utilisez des tokens de session pour vérifier l'authenticité des requêtes, empêchant ainsi les utilisateurs non autorisés de soumettre des formulaires modifiés.
+2. **Utilisation de tokens de session** : Utilisez des tokens de session pour vérifier l'authenticité des requêtes, empêchant ainsi les utilisateurs non autorisés de soumettre des formulaires modifiés.
 
 ## Conclusion
 
