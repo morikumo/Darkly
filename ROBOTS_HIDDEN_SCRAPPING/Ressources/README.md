@@ -100,6 +100,12 @@ else:
 - Le script explore les répertoires de manière récursive et parallèle, limitant la profondeur pour améliorer la performance.
 - Il télécharge et analyse les fichiers README pour détecter la présence de flags.
 
+## Flag
+
+```
+d5eec3ec36cf80dce44a896f961c1831a05526ec215693c8f2c39543497d4466
+```
+
 ## Prévention contre le Web Scraping
 
 Pour éviter que votre site web soit vulnérable au web scraping, suivez ces recommandations :

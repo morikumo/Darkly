@@ -42,7 +42,7 @@ Cette faille est connue sous le nom de **redirection ouverte**.
 ## Flag
 
 ```
-<Insérez le flag ici>
+b9e775a0291fed784a2d9680fcfad7edd6b8cdf87648da647aaf4bba288bcab3
 ```
 
 ## Recommandations pour corriger la faille

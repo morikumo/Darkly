@@ -63,7 +63,7 @@ Cette faille est connue sous le nom d'**injection de paramètres cachés**.
 ## Flag
 
 ```
-<Insérez le flag ici>
+03a944b434d5baff05f46c4bede5792551a2595574bcafc9a6e25f67c382ccaa
 ```
 
 ## Recommandations pour corriger la faille

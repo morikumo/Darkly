@@ -28,7 +28,7 @@ Cette faille est connue sous le nom de **Cross-Site Scripting (XSS)**.
 ## Flag
 
 ```
-<Insérez le flag ici>
+0fbb54bbf7d099713ca4be297e1bc7da0173d8b3c21c1811b916a3a86652724e
 ```
 
 ## Recommandations pour corriger la faille
