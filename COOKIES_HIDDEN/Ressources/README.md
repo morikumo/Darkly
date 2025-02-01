@@ -25,6 +25,8 @@ Une vulnérabilité a été découverte dans la gestion des cookies de l'applica
      Set-Cookie: I_am_admin=68934a3e9455fa72420237eb05902327; expires=Thu, 01-Aug-2024 12:34:23 GMT; Max-Age=3600
      ```
 
+
+      Rendez-vous dans l'inspection -- Application -- Cookies --> Changer les cookies.
 2. **Analyse de la valeur du cookie** :
    - La valeur du cookie `I_am_admin` est `68934a3e9455fa72420237eb05902327`. En la passant dans un outil de décryptage MD5, elle correspond à "false".
 
