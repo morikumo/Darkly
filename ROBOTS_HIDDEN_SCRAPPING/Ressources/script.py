@@ -1,9 +1,10 @@
+from typing import Any
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, ResultSet
 import os
 
-def find_flag_in_readme(base_url):
-    def fetch_directory(url):
+def find_flag_in_readme(base_url: str):
+    def fetch_directory(url: str) -> ResultSet[Any]:
         response = requests.get(url)
         soup = BeautifulSoup(response.content, 'html.parser')
         return soup.find_all('a')
