@@ -50,7 +50,7 @@ http://ip-addr/?page=survey
    - Le formulaire se soumet automatiquement lorsque la valeur du menu déroulant est changée grâce à l'attribut `onchange`.
 
 6. **Obtention du flag** :
-   - En modifiant la valeur de l'attribut 'value' dans le formulaire, au niveau des balises <option>, et en sélectionnant ensuite cette option sur le site, nous obtenons le flag.
+   - En modifiant la valeur de l'attribut 'value' dans le formulaire, au niveau des balises `option`, et en sélectionnant ensuite cette option sur le site, nous obtenons le flag.
 
 ## Nom de la faille
 
