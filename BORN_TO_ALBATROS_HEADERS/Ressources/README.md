@@ -8,6 +8,8 @@
 1. **Accéder à la page cible** :
    - Accédez à l'URL suivante : `http://192.168.1.10/?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f`.
    
+   Comment la trouver ? Aller tout en bas de la page pour cliquer sur le dernier lien.
+
 2. **Inspecter la page** :
    - Ouvrez l'inspecteur du navigateur (clic droit sur la page et sélectionnez "Inspecter" ou appuyez sur `Ctrl+Shift+I`).
    - Allez dans l'onglet "Elements" pour voir le code source de la page.

