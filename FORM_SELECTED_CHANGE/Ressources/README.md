@@ -74,3 +74,6 @@ Pour corriger cette faille, voici quelques recommandations :
 Cette faille montre l'importance de ne pas se fier uniquement aux validations côté client et de toujours valider et filtrer les entrées côté serveur. En suivant les recommandations ci-dessus, la sécurité de ce formulaire peut être significativement améliorée.
 
 ---
+
+
+// Pas besoin de toucher au hidden il faut changer la valeur que l'on va choisir pour le menu deroullant ** a corriger **
