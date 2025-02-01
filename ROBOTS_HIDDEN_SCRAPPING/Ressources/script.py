@@ -3,9 +3,12 @@ import requests
 from bs4 import BeautifulSoup, ResultSet
 import os
 
-def find_flag_in_readme(base_url: str):
-    def fetch_directory(url: str) -> ResultSet[Any]:
-        response = requests.get(url)
+
+session = requests.session()
+
+def find_flag_in_readme(base_url):
+    def fetch_directory(url):
+        response = session.get(url)
         soup = BeautifulSoup(response.content, 'html.parser')
         return soup.find_all('a')
 
@@ -22,10 +25,10 @@ def find_flag_in_readme(base_url: str):
 
         for link in links:
             href = link.get('href')
-            if href and href not in ['.', '..']:
+            if href and href not in ['.', '..', './', '../']:
                 full_url = os.path.join(current_url, href)
                 if is_readme_file(link):
-                    response = requests.get(full_url)
+                    response = session.get(full_url)
                     content = response.text
                     if "flag" in content:
                         flag_path = full_url
@@ -37,7 +40,7 @@ def find_flag_in_readme(base_url: str):
     return None, None
 
 # Utilisation
-base_url = "http://192.168.1.16/.hidden/"
+base_url = "http://192.168.56.101/.hidden/"
 flag_path, flag_content = find_flag_in_readme(base_url)
 
 if flag_path:

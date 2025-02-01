@@ -64,12 +64,9 @@ def process_directory(current_url, max_depth, current_depth):
 
     return None, None
 
-def find_flag_in_readme(base_url, max_depth=10):
-    return process_directory(base_url, max_depth, 0)
-
 # Utilisation
 base_url = "http://ip-addr/.hidden/"
-flag_path, flag_content = find_flag_in_readme(base_url)
+flag_path, flag_content = process_directory(base_url, 10, 0)
 
 if flag_path:
     print(f"Flag found in: {flag_path}")
@@ -87,12 +84,7 @@ else:
 2. **Fonction `is_readme_file(link)`** :
    - Vérifie si un lien correspond à un fichier README.
 
-3. **Fonction `process_directory(current_url, max_depth, current_depth)`** :
-   - Explore récursivement les répertoires jusqu'à une profondeur maximale (`max_depth`).
-   - Utilise `ThreadPoolExecutor` pour télécharger et vérifier les fichiers en parallèle.
-   - Retourne le chemin et le contenu du fichier README contenant le flag, s'il est trouvé.
-
-4. **Fonction `find_flag_in_readme(base_url, max_depth)`** :
+3. **Fonction `find_flag_in_readme(base_url, max_depth)`** :
    - Démarre l'exploration à partir de `base_url` avec une profondeur maximale de 10 (modifiable selon vos besoins).
 
 ### Exécution
