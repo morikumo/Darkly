@@ -19,7 +19,7 @@ Une attaque par force brute a été utilisée pour découvrir le mot de passe de
    ```
 
 2. **Créer un script bash pour automatiser la tentative de connexion** :
-   - Créez un script bash nommé `bruteforce.sh` avec le contenu suivant :
+   - Créez un script bash nommé `script.sh` avec le contenu suivant :
 
    ```bash
    #!/bin/bash
